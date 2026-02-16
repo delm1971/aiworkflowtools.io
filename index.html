@@ -1,122 +1,692 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI Workflow Tools | Smart AI Automation & CRM Systems</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Workflow Tools | CRM Automation, AI Knowledge Bases & Smart Systems</title>
+  <meta name="description" content="AI Workflow Tools: reviews, tutorials, and step-by-step setups for CRM automation, AI knowledge bases, and business workflows. Featuring HubSpot + CustomGPT." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://aiworkflowtools.io/" />
 
-<meta name="description" content="Discover AI workflow tools for CRM automation, AI knowledge bases, and smart business systems. Tutorials, reviews, and AI SaaS guides.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Workflow Tools | CRM Automation + AI Knowledge Bases" />
+  <meta property="og:description" content="Reviews, tutorials, and setups for AI workflow automation. Featuring HubSpot and CustomGPT." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://aiworkflowtools.io/" />
+  <!-- Optional: update if you add an image -->
+  <meta property="og:image" content="https://aiworkflowtools.io/og-image.jpg" />
 
-<style>
-body{
-  margin:0;
-  font-family:Arial, Helvetica, sans-serif;
-  background:#0b1220;
-  color:#fff;
-}
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-}
-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{
-  font-weight:bold;
-  font-size:22px;
-}
-.hero{
-  text-align:center;
-  padding:80px 20px;
-}
-h1{
-  font-size:42px;
-}
-p{
-  color:#c5d0ff;
-}
-.btn{
-  background:#7c5cff;
-  color:white;
-  padding:14px 22px;
-  border-radius:8px;
-  text-decoration:none;
-  display:inline-block;
-  margin:10px;
-}
-.section{
-  padding:40px 0;
-}
-.card{
-  background:#111a2e;
-  padding:20px;
-  border-radius:10px;
-  margin-bottom:20px;
-}
-footer{
-  text-align:center;
-  padding:40px 0;
-  color:#aaa;
-}
-</style>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Workflow Tools" />
+  <meta name="twitter:description" content="CRM automation + AI knowledge base tools. Guides, comparisons, and templates." />
+  <meta name="twitter:image" content="https://aiworkflowtools.io/og-image.jpg" />
+
+  <style>
+    :root{
+      --bg:#070A12;
+      --panel:#0B1020;
+      --card:#0E1730;
+      --card2:#0B1328;
+      --text:#EAF0FF;
+      --muted:#B9C6E6;
+      --muted2:#93A4CC;
+      --border:rgba(255,255,255,.10);
+
+      --brand1:#7C5CFF;
+      --brand2:#2DE1C2;
+      --brand3:#5B7DFF;
+
+      --shadow: 0 12px 34px rgba(0,0,0,.45);
+      --radius:18px;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:
+        radial-gradient(1100px 700px at 10% -10%, rgba(124,92,255,.30), transparent 55%),
+        radial-gradient(900px 650px at 90% 10%, rgba(45,225,194,.18), transparent 55%),
+        radial-gradient(900px 650px at 50% 120%, rgba(91,125,255,.14), transparent 55%),
+        var(--bg);
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:22px}
+    .topbar{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.55);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px;
+      padding:12px 22px;
+      max-width:var(--max); margin:0 auto;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      box-shadow: 0 14px 30px rgba(124,92,255,.22);
+      position:relative;
+      overflow:hidden;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:-40%;
+      background: radial-gradient(circle at 40% 30%, rgba(255,255,255,.45), transparent 55%);
+      transform: rotate(18deg);
+    }
+
+    .navlinks{display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      text-decoration:none;
+      color:var(--muted);
+      padding:8px 10px;
+      border-radius:12px;
+      border:1px solid transparent;
+      font-weight:700;
+      font-size:14px;
+    }
+    .navlinks a:hover{
+      border-color:rgba(255,255,255,.10);
+      color:var(--text);
+      background: rgba(255,255,255,.03);
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:12px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      text-decoration:none;
+      font-weight:900;
+      white-space:nowrap;
+      transition: transform .08s ease, filter .2s ease, background .2s ease;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand1), var(--brand3));
+      box-shadow: 0 14px 34px rgba(124,92,255,.26);
+    }
+    .btn.primary:hover{filter:brightness(1.06)}
+    .btn.teal{
+      border-color: transparent;
+      background: linear-gradient(135deg, var(--brand2), #27c6ff);
+      box-shadow: 0 14px 34px rgba(45,225,194,.18);
+      color:#071018;
+    }
+
+    .hero{
+      padding:38px 0 14px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:20px;
+      align-items:stretch;
+    }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      color:var(--muted);
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.2px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      background: linear-gradient(135deg, var(--brand1), var(--brand2));
+      box-shadow: 0 0 18px rgba(124,92,255,.35);
+    }
+    h1{
+      margin:14px 0 10px;
+      font-size: clamp(34px, 4.8vw, 56px);
+      line-height:1.03;
+      letter-spacing:-.8px;
+    }
+    .sub{
+      margin:0 0 16px;
+      font-size:18px;
+      color:var(--muted);
+      max-width:62ch;
+    }
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 16px}
+    .pill{
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.16);
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+    }
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
+
+    .card{
+      border:1px solid rgba(255,255,255,.10);
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroCard{
+      padding:18px;
+      background:
+        linear-gradient(180deg, rgba(45,225,194,.08), rgba(255,255,255,.02));
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .mini{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      padding:12px;
+      background: rgba(0,0,0,.14);
+    }
+    .mini strong{display:block; margin-bottom:6px}
+    .mini span{color:var(--muted); font-size:14px}
+    .disclosure{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      border:1px dashed rgba(255,255,255,.18);
+      border-radius:16px;
+      padding:10px 12px;
+      background: rgba(0,0,0,.12);
+    }
+
+    .section{padding:28px 0}
+    .section h2{
+      margin:0 0 8px;
+      font-size:28px;
+      letter-spacing:-.3px;
+    }
+    .section p{
+      margin:0 0 14px;
+      color:var(--muted);
+      max-width:80ch;
+    }
+
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+
+    .feature{padding:16px}
+    .feature h3{margin:10px 0 6px; font-size:16px}
+    .feature p{margin:0; color:var(--muted); font-size:14px}
+    .icon{
+      width:44px; height:44px; border-radius:16px;
+      display:grid; place-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      font-weight:900;
+    }
+
+    .toolCard{padding:18px}
+    .toolTop{display:flex; justify-content:space-between; gap:12px; align-items:flex-start}
+    .badge{
+      font-size:12px;
+      font-weight:900;
+      padding:7px 10px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      color:var(--text);
+      white-space:nowrap;
+    }
+    .badge.purple{
+      border-color: rgba(124,92,255,.38);
+      background: rgba(124,92,255,.12);
+    }
+    .badge.teal{
+      border-color: rgba(45,225,194,.38);
+      background: rgba(45,225,194,.12);
+    }
+
+    ul.clean{
+      margin:12px 0 0;
+      padding:0 0 0 18px;
+      color:var(--muted);
+    }
+    ul.clean li{margin:7px 0}
+    .note{margin-top:10px; color:var(--muted2); font-size:13px}
+
+    .divider{
+      height:1px;
+      background: rgba(255,255,255,.08);
+      margin:12px 0 0;
+    }
+
+    .callout{
+      padding:18px;
+      background:
+        radial-gradient(800px 400px at 15% 0%, rgba(124,92,255,.22), transparent 60%),
+        radial-gradient(800px 400px at 85% 0%, rgba(45,225,194,.16), transparent 60%),
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+    }
+    .callout h3{margin:0 0 8px; font-size:20px}
+    .callout p{margin:0 0 12px; color:var(--muted)}
+
+    .formRow{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin-top:10px;
+    }
+    input[type="email"]{
+      flex: 1 1 240px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.18);
+      color:var(--text);
+      outline:none;
+    }
+    input[type="email"]::placeholder{color: rgba(185,198,230,.72)}
+    .small{font-size:12px; color:var(--muted)}
+    .mutedlink{color:var(--muted); text-decoration:none}
+    .mutedlink:hover{color:var(--text)}
+
+    details{
+      border:1px solid rgba(255,255,255,.10);
+      border-radius:16px;
+      padding:12px 12px;
+      background: rgba(255,255,255,.03);
+    }
+    details + details{margin-top:10px}
+    summary{cursor:pointer; font-weight:900}
+    summary::-webkit-details-marker{display:none}
+    .faqAnswer{margin:10px 0 0; color:var(--muted)}
+
+    footer{
+      padding:26px 0 40px;
+      border-top:1px solid rgba(255,255,255,.08);
+      color:var(--muted);
+      font-size:14px;
+    }
+    .footergrid{
+      display:grid; grid-template-columns: 1.4fr .6fr; gap:16px;
+      align-items:start;
+    }
+    .footerlinks a{
+      display:inline-block;
+      margin:0 12px 10px 0;
+      text-decoration:none;
+      color:var(--muted);
+      font-weight:700;
+    }
+    .footerlinks a:hover{color:var(--text)}
+
+    .mobileHide{display:inline-flex}
+    @media (max-width: 980px){
+      .hero{grid-template-columns:1fr; gap:14px}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .mobileHide{display:none}
+    }
+  </style>
+
+  <!-- FAQ Schema (edit as you like) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is AI Workflow Tools?",
+        "acceptedAnswer":{"@type":"Answer","text":"AI Workflow Tools is a resource hub for AI automation: CRM workflows, AI knowledge bases, and step-by-step tutorials to help teams work smarter."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do you use affiliate links?",
+        "acceptedAnswer":{"@type":"Answer","text":"Yes. Some links may be affiliate links. If you purchase through them, we may earn a commission at no extra cost to you."}
+      },
+      {
+        "@type":"Question",
+        "name":"Which tools do you recommend first?",
+        "acceptedAnswer":{"@type":"Answer","text":"For most teams, start with HubSpot for CRM + automation and add CustomGPT for a document-trained AI knowledge base or support bot."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Top Nav -->
+  <div class="topbar">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="AI Workflow Tools Home">
+        <span class="logo" aria-hidden="true"></span>
+        <span>AI Workflow Tools</span>
+      </a>
 
-<div class="container">
-<header>
-<div class="logo">AI Workflow Tools</div>
-</header>
+      <div class="navlinks">
+        <a href="#featured">Featured</a>
+        <a href="#usecases">Use Cases</a>
+        <a href="#guides">Guides</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-<section class="hero">
-<h1>AI Workflow Tools — CRM Automation & Smart AI Systems</h1>
+      <a class="btn primary" href="#featured">Explore Tools</a>
+    </nav>
+  </div>
 
-<p>
-Discover the smartest AI tools for automation, customer support,
-and business growth. Reviews, tutorials, and workflow systems powered by modern AI.
-</p>
+  <main id="top" class="container">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div>
+        <span class="kicker"><span class="dot" aria-hidden="true"></span> AI automation, CRM workflows & knowledge bases</span>
+        <h1>Build smarter workflows with AI — from leads to support tickets.</h1>
+        <p class="sub">
+          Practical reviews, tutorials, and templates for <strong>CRM automation</strong>, <strong>AI knowledge bases</strong>,
+          and modern business systems. Start with a proven stack: HubSpot + CustomGPT.
+        </p>
 
-<a class="btn" href="#" target="_blank">Start with HubSpot</a>
-<a class="btn" href="#" target="_blank">Try CustomGPT</a>
+        <div class="pillrow" aria-label="Topics">
+          <span class="pill">AI CRM automation</span>
+          <span class="pill">AI support bots</span>
+          <span class="pill">Internal knowledge base</span>
+          <span class="pill">No-code workflows</span>
+          <span class="pill">SaaS comparisons</span>
+        </div>
 
-<p style="margin-top:20px;font-size:14px;">
-Affiliate Disclosure: Some links may earn a commission at no extra cost to you.
-</p>
-</section>
+        <div class="ctaRow" aria-label="Primary calls to action">
+          <!-- Replace with your real affiliate links -->
+          <a class="btn primary" href="YOUR_HUBSPOT_AFFILIATE_LINK" target="_blank" rel="nofollow sponsored noopener">
+            Start with HubSpot
+          </a>
+          <a class="btn teal" href="YOUR_CUSTOMGPT_AFFILIATE_LINK" target="_blank" rel="nofollow sponsored noopener">
+            Try CustomGPT
+          </a>
+          <a class="btn" href="#guides">See Tutorials</a>
+        </div>
 
-<section class="section">
-<div class="card">
-<h2>🚀 AI CRM Automation</h2>
-<p>
-Manage contacts, automate marketing workflows, and streamline business operations
-using modern AI CRM platforms like HubSpot.
-</p>
-</div>
+        <div class="disclosure">
+          <strong>Affiliate disclosure:</strong> Some links on this site are affiliate links. If you click and purchase,
+          we may earn a commission at no extra cost to you.
+        </div>
+      </div>
 
-<div class="card">
-<h2>🤖 AI Knowledge Base Tools</h2>
-<p>
-Turn documents into AI-powered chatbots for customer support and internal teams
-using tools like CustomGPT.
-</p>
-</div>
+      <aside class="card heroCard" aria-label="Quick-start checklist">
+        <div class="mini">
+          <strong>Fastest path to results</strong>
+          <span>Pick a workflow → follow a tutorial → launch an automation → measure + improve.</span>
+        </div>
+        <div class="mini">
+          <strong>Recommended starter stack</strong>
+          <span><b>HubSpot</b> for CRM + automation, plus <b>CustomGPT</b> for a doc-trained knowledge base bot.</span>
+        </div>
+        <div class="mini">
+          <strong>What we publish</strong>
+          <span>Tool reviews, comparisons, templates, and real-world examples (built for teams and solo operators).</span>
+        </div>
+        <div class="mini">
+          <strong>Best for</strong>
+          <span>Small businesses, IT teams, agencies, and support teams that want scalable, repeatable systems.</span>
+        </div>
+      </aside>
+    </section>
 
-<div class="card">
-<h2>⚡ Smart Business Workflows</h2>
-<p>
-Combine AI tools to automate repetitive tasks, improve productivity,
-and scale your online business faster.
-</p>
-</div>
-</section>
+    <!-- WHY / FEATURES -->
+    <section class="section" aria-label="Features">
+      <h2>Why this site converts (and ranks)</h2>
+      <p>
+        We focus on real workflows and “how-to” content—exactly what people search for when they’re ready to choose tools.
+      </p>
 
-<footer>
-<p>© 2026 AI Workflow Tools — aiworkflowtools.io</p>
-</footer>
+      <div class="grid3">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">⚡</div>
+          <h3>Workflow-first tutorials</h3>
+          <p>Step-by-step guides for automation—lead capture, follow-ups, ticket routing, and reporting.</p>
+        </div>
 
-</div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🤖</div>
+          <h3>AI knowledge base setups</h3>
+          <p>Turn PDFs and docs into an AI assistant for internal SOPs, support, onboarding, and FAQs.</p>
+        </div>
+
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">📈</div>
+          <h3>Buy-ready comparisons</h3>
+          <p>Clear “who it’s for” breakdowns so visitors can decide quickly and confidently.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED TOOLS -->
+    <section id="featured" class="section" aria-label="Featured tools">
+      <h2>Featured tools we recommend</h2>
+      <p>
+        These two tools cover most needs: CRM + automation (HubSpot) and a document-trained knowledge base bot (CustomGPT).
+      </p>
+
+      <div class="grid2">
+        <!-- HubSpot -->
+        <article class="card toolCard" aria-label="HubSpot">
+          <div class="toolTop">
+            <div>
+              <h3 style="margin:0 0 6px;font-size:20px;">HubSpot — CRM + Automation</h3>
+              <p style="margin:0;color:var(--muted);">
+                Best for managing contacts, leads, marketing automation, pipelines, and service workflows in one place.
+              </p>
+            </div>
+            <span class="badge purple">High-ticket SaaS</span>
+          </div>
+
+          <ul class="clean">
+            <li>Lead capture → nurture → close workflows</li>
+            <li>Sales pipelines, tasks, automation, reporting</li>
+            <li>Service workflows (tickets, SLAs, routing)</li>
+          </ul>
+
+          <div class="ctaRow">
+            <a class="btn primary" href="YOUR_HUBSPOT_AFFILIATE_LINK" target="_blank" rel="nofollow sponsored noopener">
+              Start Free / Learn More
+            </a>
+            <a class="btn" href="#guides">HubSpot Guides</a>
+          </div>
+
+          <div class="divider"></div>
+          <p class="note"><strong>Conversion tip:</strong> Show one workflow end-to-end (form → email → pipeline → follow-up).</p>
+        </article>
+
+        <!-- CustomGPT -->
+        <article class="card toolCard" aria-label="CustomGPT">
+          <div class="toolTop">
+            <div>
+              <h3 style="margin:0 0 6px;font-size:20px;">CustomGPT — AI Knowledge Base Bot</h3>
+              <p style="margin:0;color:var(--muted);">
+                Best for turning docs into a private AI assistant for internal SOPs, customer support, and FAQs.
+              </p>
+            </div>
+            <span class="badge teal">Recurring SaaS</span>
+          </div>
+
+          <ul class="clean">
+            <li>Train on PDFs, docs, help articles, and policies</li>
+            <li>Ideal for IT helpdesks and support teams</li>
+            <li>Great add-on to any CRM stack</li>
+          </ul>
+
+          <div class="ctaRow">
+            <a class="btn teal" href="YOUR_CUSTOMGPT_AFFILIATE_LINK" target="_blank" rel="nofollow sponsored noopener">
+              Try CustomGPT
+            </a>
+            <a class="btn" href="#guides">CustomGPT Guides</a>
+          </div>
+
+          <div class="divider"></div>
+          <p class="note"><strong>Conversion tip:</strong> Show “before/after” (repeat questions → instant answers from docs).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="usecases" class="section" aria-label="Use cases">
+      <h2>High-converting use cases</h2>
+      <p>These are perfect for SEO articles and TikTok demos because they solve specific, urgent problems.</p>
+
+      <div class="grid3">
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🧰</div>
+          <h3>AI helpdesk for IT</h3>
+          <p>Reduce repeat tickets with an internal SOP bot trained on your docs and troubleshooting guides.</p>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🎧</div>
+          <h3>Support automation</h3>
+          <p>Route tickets, apply SLAs, and give customers instant answers from your knowledge base.</p>
+        </div>
+        <div class="card feature">
+          <div class="icon" aria-hidden="true">🧲</div>
+          <h3>Lead capture to close</h3>
+          <p>Automate follow-ups and pipeline stages so no leads slip through the cracks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section id="guides" class="section" aria-label="Guides">
+      <h2>Guides & tutorials</h2>
+      <p>
+        Add your articles here as you publish. Internal linking from posts → “Featured tools” and use cases helps rankings.
+      </p>
+
+      <div class="grid2">
+        <div class="card toolCard">
+          <h3 style="margin:0 0 8px;font-size:18px;">HubSpot tutorials</h3>
+          <ul class="clean">
+            <li><a class="mutedlink" href="/hubspot-ai-crm-automation-guide">AI CRM Automation Guide (2026)</a></li>
+            <li><a class="mutedlink" href="/hubspot-workflows-lead-followup">No-code lead follow-up workflows</a></li>
+            <li><a class="mutedlink" href="/hubspot-service-hub-support-playbook">Service Hub support playbook</a></li>
+          </ul>
+          <p class="note">Tip: Start with 3–5 posts before applying to affiliate programs.</p>
+        </div>
+
+        <div class="card toolCard">
+          <h3 style="margin:0 0 8px;font-size:18px;">CustomGPT tutorials</h3>
+          <ul class="clean">
+            <li><a class="mutedlink" href="/customgpt-knowledge-base-chatbot-guide">AI knowledge base bot guide (2026)</a></li>
+            <li><a class="mutedlink" href="/customgpt-train-on-pdfs-docs">Train a bot on PDFs & docs</a></li>
+            <li><a class="mutedlink" href="/internal-policy-bot-template">Internal policy bot template (HR/IT)</a></li>
+          </ul>
+          <p class="note">Tip: Use screenshots + short clips; they boost trust and conversions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMAIL / CALLOUT -->
+    <section class="section" aria-label="Newsletter callout">
+      <div class="card callout">
+        <h3>Get the “AI Workflow Stack” checklist</h3>
+        <p>
+          A simple, repeatable framework to choose tools, build workflows, and ship automation fast.
+          (You can wire this form to an email tool later.)
+        </p>
+
+        <!-- NOTE: This is a placeholder form (no backend). -->
+        <form class="formRow" onsubmit="return false;" aria-label="Email signup form">
+          <input type="email" placeholder="Email address (optional)" aria-label="Email address" />
+          <a class="btn primary" href="#contact" role="button">Request Checklist</a>
+        </form>
+
+        <p class="small" style="margin-top:10px;">
+          No spam. Just practical templates and tutorials.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-label="FAQ">
+      <h2>FAQ</h2>
+      <p>Quick answers for visitors (and search engines).</p>
+
+      <div class="card" style="padding:18px;">
+        <details>
+          <summary>Do you use affiliate links?</summary>
+          <p class="faqAnswer">Yes. Some links are affiliate links. If you purchase through them, we may earn a commission at no extra cost to you.</p>
+        </details>
+        <details>
+          <summary>What should I start with?</summary>
+          <p class="faqAnswer">Most teams start with HubSpot for CRM + automation, then add CustomGPT for a document-trained knowledge base or support bot.</p>
+        </details>
+        <details>
+          <summary>How do you pick tools to recommend?</summary>
+          <p class="faqAnswer">We focus on fit: use case, ease of setup, reliability, and the fastest path to measurable results.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-label="Contact">
+      <h2>Contact</h2>
+      <p>Brand partnership, tool review request, or a question about a workflow? Reach out.</p>
+
+      <!-- Replace with your email -->
+      <a class="btn" href="mailto:you@aiworkflowtools.io">you@aiworkflowtools.io</a>
+      <p class="small" style="margin-top:10px;">
+        Tip: Use a dedicated inbox like <strong>hello@aiworkflowtools.io</strong> for affiliate applications.
+      </p>
+    </section>
+  </main>
+
+  <footer class="container" aria-label="Footer">
+    <div class="footergrid">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span class="logo" aria-hidden="true" style="width:36px;height:36px;border-radius:14px;"></span>
+          <strong>AI Workflow Tools</strong>
+        </div>
+        <p style="margin:0 0 10px;">
+          Reviews and tutorials for AI automation: CRM workflows, knowledge bases, and smart business systems.
+        </p>
+        <p class="small" style="margin:0;">© <span id="year"></span> AI Workflow Tools. All rights reserved.</p>
+      </div>
+
+      <div class="footerlinks">
+        <!-- Create these pages later (or keep as placeholders) -->
+        <a href="/affiliate-disclosure">Affiliate Disclosure</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Optional: if your affiliate links aren't ready yet, prevent accidental clicks
+    // Remove this block once you replace the placeholders with real links.
+    (function() {
+      const placeholders = ["YOUR_HUBSPOT_AFFILIATE_LINK", "YOUR_CUSTOMGPT_AFFILIATE_LINK"];
+      document.querySelectorAll('a[href]').forEach(a => {
+        if (placeholders.includes(a.getAttribute('href'))) {
+          a.addEventListener('click', (e) => {
+            e.preventDefault();
+            alert("Replace the placeholder affiliate link in index.html first.");
+          });
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
